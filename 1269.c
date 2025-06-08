@@ -86,7 +86,7 @@ void heapSort(int arr[], int n) {
     free(heap);
 }
 
-// Build heap from array
+// Build heap from array to be sort later
 void buildHeap(MinHeap *heap, int arr[], int n) {
     for (int i = 0; i < n; i++) {
         heap->data[i] = arr[i];
