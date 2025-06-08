@@ -23,7 +23,7 @@ void insert(MinHeap *heap, int value) {
     
     heap->data[heap->size] = value;
     heap->size++;
-    heapifyUp(heap, heap->size - 1);
+    heapifyUp(heap, heap->size);
 }
 
 // Heapify up (maintain min heap property)
@@ -48,7 +48,7 @@ int extractMin(MinHeap *heap) {
     if (heap->size <= 0) return -1;
     
     int min = heap->data[0];
-    heap->data[0] = heap->data[heap->size - 1];
+    heap->data[0] = heap->data[heap->size];
     heap->size--;
     heapifyDown(heap, 0);
     
